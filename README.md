@@ -1,4 +1,4 @@
-# %knowledge
+# %onyx
 
 ## Desk
 
@@ -8,7 +8,7 @@ TODO: Add further documentation on beginning Hoon development
 
 ## UI
 
-%knowledge is built primarily using [React], JavaScript, and [Tailwind CSS]. [Vite] ensures that all code and assets are loaded appropriately, bundles the application for distribution and provides a functional dev environment.
+%onyx is built primarily using [React], JavaScript, and [Tailwind CSS]. [Vite] ensures that all code and assets are loaded appropriately, bundles the application for distribution and provides a functional dev environment.
 
 ### Getting Started
 
