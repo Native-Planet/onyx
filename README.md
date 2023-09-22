@@ -1,6 +1,16 @@
 # %onyx
 
 ## Desk
+To load the desk into a running urbit ship use the following commands in dojo
+```
+|new-desk %onyx
+|moount %onyx
+```
+Copy the files into `sampel-palnet/onyx` and run the following in dojo
+```
+|commit %onyx
+|install our %onyx
+```
 
 The desk currently has the minimum amount of files necessary to distribute an application and should be distributable immediately. Any further Hoon development should happen here.
 
