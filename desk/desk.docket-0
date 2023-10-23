@@ -1,10 +1,10 @@
 :~
-  title+'knowledge'
+  title+'onyx'
   info+'A knowledge management app'
   color+0xd9.b06d
   version+[0 1 1]
-  website+'https://structure.support/'
+  website+''
   license+'MIT'
-  base+'knwoledge'
+  base+'onyx'
   glob-ames+[~wex 0v0]
 ==
