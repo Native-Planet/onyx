@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
-import Folders from "./folderManagement";
-import Notes from "./noteManagement";
+import Menu from "./management/menu";
+import TreeView from "./management/treeView";
 import Editor from "./Editor";
 import Start from "./start-screen";
 
@@ -18,8 +18,8 @@ export default function App() {
   
   return (
     <div className="App">
-      <Folders/>
-      <Notes/>
+      <Menu/>
+      <TreeView/>
       {showEditor ? (
         <Editor/>
       ) : (

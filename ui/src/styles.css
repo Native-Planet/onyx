@@ -45,32 +45,29 @@ body {
     text-align: right;
   }
   
-.folder-management {
-  display: flex;
-  width: 6%;
-  border: 1px solid black;
-  background-color: #565656;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 1;
-  overflow: auto; /* Add a scrollbar when icons exceed the container size */
-  white-space: nowrap;
-  
-}
+  .menu-management {
+    display: flex;
+    width: 3%;
+    border: 1px solid black;
+    background-color: #403D39;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+    white-space: nowrap;
+  }
 
-.note-management {
+.treeView-management {
   display: flex;
   border: 2px  solid black;
   width: 9%;
-  background-color: #414141;
+  background-color: #403D39;
   position: fixed;
   top: 0;
-  left: 6%; /* Leave space for folder-management */
+  left: 3%; /* Leave space for folder-management */
   height: 100%;
   z-index: 1;
-  overflow: auto; /* Add a scrollbar when icons exceed the container size */
   white-space: nowrap;
 }
 
@@ -81,13 +78,16 @@ body {
   line-height: 20px;
   font-weight: 400;
   text-align: left;
-  background-color: black;
-  margin-left: 15%; /* Adjust margin to leave space for folder and note divs */
+  background-color: #252422;
+  ;
+  margin-left: 12%; /* Adjust margin to leave space for folder and note divs */
   z-index: 0; /* Ensure the editor is below the other divs */
+  
 }
   
   .editor-inner {
-    background: black;
+    background: #252422;
+    ;
     position: relative;
   }
   
@@ -784,26 +784,29 @@ body {
   .upload {
     background-image: url(../public/images/icons/upload.svg);
   }
+ 
   .add-folder {
-  display: flex;
-  position: absolute;
-  width: 50px;
-  height: 45px;
-  left: 10%;
-  top: 1%;
-  background-size: 50px 45px;
-  background-image: url(../public/images/icons/folder-add-svgrepo-com.png);
-  }
-  .browse-folder {
     display: flex;
     position: absolute;
-    width: 45px;
-    height: 39px;
-    left: 60%;
-    top: 1%;
-    background-size: 45px 39px;
-    background-image: url(../public/images/icons/folder-svgrepo-com.png);
-    }
+    color: white;
+    width: 50px;
+    height: 45px;
+    left: 10%;
+    top: 1%; /* Adjusted top value */
+    background-size: 50px 45px;
+    background-image: url(../public/images/icons/add-folder.svg);
+  }
+  
+  .add-note {
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    left: 10%; /* Adjusted left value to match .add-folder */
+    top: 100px; /* Adjusted top value to stack the icons */
+    background-size: 50px 45px;
+    background-image: url(../public/images/icons/add-note.svg);
+  }
   .settings {
   display: flex;
   position: absolute;
@@ -853,8 +856,8 @@ body {
   line-height: 20px;
   font-weight: 400;
   text-align: center;
-  background-color: black;
-  margin-left: 15%; /* Adjust margin to leave space for folder and note divs */
+  background-color:  #252422;
+  margin-left: 12%; /* Adjust margin to leave space for folder and note divs */
   z-index: 0; 
   }
   .inner-start-screen {

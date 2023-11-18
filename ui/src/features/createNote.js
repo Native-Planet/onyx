@@ -5,7 +5,7 @@ function App(){
 
 
     return (
-        <i className="add" title="Create a New Note"/>
+        <i className="add-note" title="Create a New Note"/>
     );
 }
 
