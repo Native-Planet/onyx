@@ -47,7 +47,7 @@ body {
   
   .menu-management {
     display: flex;
-    width: 4%;
+    width: 5%;
     border: 1px solid black;
     background-color: #403D39;
     background-size: 3vw 3vw;
@@ -62,7 +62,7 @@ body {
 .treeView-management {
   display: flex;
   border: 2px  solid black;
-  width: 9%;
+  width: 5%;
   background-color: #403D39;
   position: fixed;
   top: 0;
