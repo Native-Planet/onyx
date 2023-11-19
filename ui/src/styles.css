@@ -47,9 +47,10 @@ body {
   
   .menu-management {
     display: flex;
-    width: 3%;
+    width: 4%;
     border: 1px solid black;
     background-color: #403D39;
+    background-size: 3vw 3vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -65,9 +66,9 @@ body {
   background-color: #403D39;
   position: fixed;
   top: 0;
-  left: 3%; /* Leave space for folder-management */
+  left: 5%; /* Leave space for folder-management */
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   white-space: nowrap;
 }
 
@@ -789,22 +790,22 @@ body {
     display: flex;
     position: absolute;
     color: white;
-    width: 50px;
-    height: 45px;
+    width: 2vw;
+    height: 2vw;
+    background-size: 2vw 2vw;
     left: 10%;
     top: 1%; /* Adjusted top value */
-    background-size: 50px 45px;
     background-image: url(../public/images/icons/add-folder.svg);
   }
   
   .add-note {
     display: flex;
     position: absolute;
-    width: 50px;
-    height: 45px;
+    width: 2vw;
+    height: 2vw;
+    background-size: 2vw 2vw;
     left: 10%; /* Adjusted left value to match .add-folder */
     top: 100px; /* Adjusted top value to stack the icons */
-    background-size: 50px 45px;
     background-image: url(../public/images/icons/add-note.svg);
   }
   .settings {
@@ -812,9 +813,9 @@ body {
   position: absolute;
   bottom: 1%;
   left: 10%;
-  width: 50px;
-  height: 45px;
-  background-size: 50px 45px;
+  width: 2vw;
+  height: 2vw;
+  background-size: 2vw 2vw;
   background-image: url(../public/images/icons/settings.svg);
   }
   .help {
@@ -822,9 +823,9 @@ body {
   position: absolute;
   bottom: 6%;
   left: 15%;
-  width: 40px;
-  height: 40px;
-  background-size: 40px 40px;
+  width: 2vw;
+  height: 2vw;
+  background-size: 2vw 2vw;
   background-image: url(../public/images/icons/help.svg);
   }
   .add {
@@ -862,5 +863,24 @@ body {
   }
   .inner-start-screen {
     margin-top: 25%;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Functionality for buttons still needs to be added */
+  
+  .newFolderButton, .gotoFileButton, .recentButton, .closeButton {
+    margin-bottom: 5px; /* Adds some space between the buttons */
+    background-color: #252422;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
   
