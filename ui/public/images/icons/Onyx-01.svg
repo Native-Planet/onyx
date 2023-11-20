@@ -1,0 +1,13 @@
+import React from 'react';
+
+const Onyx01 = ({ fill = 'none', height = '2000', width = '2000' }) => (
+  <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" height={height} width={width}>
+    <defs>
+      <style>.cls-1{stroke-width:0px;}</style>
+    </defs>
+    <path className="cls-1" d="m519.16,1197.54c96.12,0,173.01,77.38,173.01,173.5s-76.9,172.53-173.01,172.53-172.53-76.42-172.53-172.53,76.41-173.5,172.53-173.5Zm0,269.13c52.86,0,96.12-43.25,96.12-95.64s-43.25-96.6-96.12-96.6-95.64,43.73-95.64,96.6,43.25,95.64,95.64,95.64Z"/>
+    {/* other paths */}
+  </svg>
+);
+
+export default Onyx01;

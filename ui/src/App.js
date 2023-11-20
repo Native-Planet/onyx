@@ -18,6 +18,9 @@ export default function App() {
   
   return (
     <div className="App">
+      <div className="top-menu-bar">
+        <div className="Icon"></div>
+      </div>
       <Menu/>
       <TreeView/>
       {showEditor ? (

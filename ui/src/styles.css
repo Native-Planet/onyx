@@ -47,6 +47,9 @@ body {
   
   .menu-management {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 5%;
     border: 1px solid black;
     background-color: #403D39;
@@ -62,7 +65,7 @@ body {
 .treeView-management {
   display: flex;
   border: 2px  solid black;
-  width: 5%;
+  width: 10%;
   background-color: #403D39;
   position: fixed;
   top: 0;
@@ -788,11 +791,13 @@ body {
  
   .add-folder {
     display: flex;
-    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 15px;
     color: white;
-    width: 2vw;
-    height: 2vw;
-    background-size: 2vw 2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: 2.5vw 2.5vw;
+    font-size: 1.5vw;
     left: 10%;
     top: 1%; /* Adjusted top value */
     background-image: url(../public/images/icons/add-folder.svg);
@@ -800,27 +805,28 @@ body {
   
   .add-note {
     display: flex;
-    position: absolute;
-    width: 2vw;
-    height: 2vw;
-    background-size: 2vw 2vw;
+    margin-bottom: auto;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: 2.5vw 2.5vw;
     left: 10%; /* Adjusted left value to match .add-folder */
     top: 100px; /* Adjusted top value to stack the icons */
     background-image: url(../public/images/icons/add-note.svg);
   }
   .settings {
   display: flex;
-  position: absolute;
+  margin-top: auto;
   bottom: 1%;
   left: 10%;
-  width: 2vw;
-  height: 2vw;
-  background-size: 2vw 2vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  background-size: 2.5vw 2.5vw;
   background-image: url(../public/images/icons/settings.svg);
   }
   .help {
   display: flex;
-  position: absolute;
+  margin-bottom: 15px;
+  margin-top: 15px;
   bottom: 6%;
   left: 15%;
   width: 2vw;
@@ -883,4 +889,13 @@ body {
     display: inline-block;
     font-size: 16px;
   }
-  
+  .top-menu-bar {
+    position: fixed;
+    top: 0;
+    border: #000;
+    border-radius: 5%;
+    width: 100%;
+    height: 15px; /* adjust as needed */
+    background-color: #252422; /* adjust as needed */
+    z-index: 3; /* adjust as needed */
+  }
