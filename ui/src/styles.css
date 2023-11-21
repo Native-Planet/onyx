@@ -82,9 +82,8 @@ body {
   line-height: 20px;
   font-weight: 400;
   text-align: left;
-  background-color: #252422;
-  ;
-  margin-left: 12%; /* Adjust margin to leave space for folder and note divs */
+  background-color: #252422;;
+  margin-left: 15%; /* Adjust margin to leave space for folder and note divs */
   z-index: 0; /* Ensure the editor is below the other divs */
   
 }
@@ -788,7 +787,52 @@ body {
   .upload {
     background-image: url(../public/images/icons/upload.svg);
   }
- 
+  body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px; /* Change max-width to 100% */
+  min-width: 300px; /* Adjust min-width based on your design requirements */
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
   .add-folder {
     display: flex;
     margin-top: 15px;
@@ -834,26 +878,7 @@ body {
   background-size: 2vw 2vw;
   background-image: url(../public/images/icons/help.svg);
   }
-  .add {
-    display: flex;
-    position: absolute;
-    width: 45px;
-    height: 39px;
-    left: 15%;
-    top: 1%;
-    background-size: 45px 39px;
-    background-image: url(../public/images/icons/new-note.svg);
-  }
-  .hide {
-    display: flex;
-    position: absolute;
-    width: 45px;
-    height: 39px;
-    left: 75%;
-    top: 1%;
-    background-size: 45px 39px;
-    background-image: url(../public/images/icons/hide-svgrepo-com.png);
-  }
+
 
   .start-screen {
   flex-grow: 1; /* Make the editor take up remaining space */
