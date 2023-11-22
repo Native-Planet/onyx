@@ -66,13 +66,54 @@ body {
   display: flex;
   border: 2px  solid black;
   width: 10%;
+  text-align: left;
+  color: white;
   background-color: #403D39;
   position: fixed;
-  top: 0;
+  top: 15px;
   left: 5%; /* Leave space for folder-management */
   height: 100%;
   z-index: 2;
   white-space: nowrap;
+}
+
+.main-tree {
+  display: flex !important;
+  width: 90% !important;
+}
+
+.file-icon {
+  width: 15px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.folder-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
+  left: -5px;
+}
+
+span.arrow {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  position: relative;
+}
+
+.arrow-right {
+  margin-bottom: 3px;
+  width: 8px;
+  height: 12px;
+}
+
+.arrow-down {
+  margin-bottom: 5px;
+  width: 12px;
+  height: 8px;
 }
 
 .editor-container {
