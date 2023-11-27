@@ -7,9 +7,11 @@
   "dependencies": {
     "@lexical/react": "^0.12.2",
     "@urbit/api": "^2.3.0",
+    "@urbit/http-api": "^2.3.0",
     "lexical": "^0.12.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-modal": "^3.16.1",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
