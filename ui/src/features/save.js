@@ -7,7 +7,7 @@ import "../styles.css";
 function App(){
     
     const handleClick = () => {
-        const editorStateRef = useRef();
+        
         console.log("button clicked");
       };
     return (
