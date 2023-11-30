@@ -1,4 +1,4 @@
-export const sample_data = [
+const tree_data = [
     {
         id: "1",
         name: "School",
@@ -20,4 +20,6 @@ export const sample_data = [
         id: "4",
         name: "trees.js"
     }
-]
+];
+
+export default tree_data;
