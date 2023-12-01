@@ -4,6 +4,7 @@ import Menu from "./management/menu";
 import TreeView from "./management/treeView";
 import Editor from "./Editor";
 import Start from "./start-screen";
+import logo from "./logo.png"
 
 export default function App() {
   const [showEditor, setShowEditor] = useState(false);
@@ -14,11 +15,10 @@ export default function App() {
 
   };
 
-
-  
   return (
     <div className="App">
       <div className="top-menu-bar">
+        <img className="logo" src={logo} alt="Logo" />
         <div className="Icon"></div>
       </div>
       <Menu/>

@@ -10,14 +10,17 @@ function App(){
 
 
     return (
-        
         <div className="menu-management">
-            <Create/>
-            <Note/>
-            <Save/>
-            <Upload/>
-            <Settings/>
-            <Help/>
+            <div className="top-icons">
+                <Create/>
+                <Note/>
+                <Save/>
+            </div>
+            <div className="bottom-icons">
+                <Upload/>
+                <Settings/>
+                <Help/>
+            </div>
         </div>
     );
 }

@@ -1,3 +1,24 @@
+:root {
+  --primary_background: #403D39;
+  --secondary_background: #252422;
+  --tertiary_background: darkgray;
+  --border: black;
+  --font_color: white;
+  --themeToggle:white;
+  --overlay:rgba(49,49,49,0.8);
+  --quote-text:rgb(240 240 240);
+}
+
+[data-theme="light"] {
+  --primary_background: #f5f2ec;
+  --secondary_background: rgb(255 254 252);
+  --tertiary_background: #e4dfd8;
+  --border: #CCC5B9;
+  --font_color: #252422;
+  --theme_toggle:black;
+  --overlay: rgba(195, 192, 186, 0.85);
+  --quote-text: rgb(115 115 115);
+}
 body {
     margin: 0;
     background: white;
@@ -10,7 +31,7 @@ body {
   
   .other h2 {
     font-size: 18px;
-    color: white;
+    color: var(--font_color);
     margin-bottom: 7px;
   }
   
@@ -34,7 +55,7 @@ body {
   
   h1 {
     font-size: 24px;
-    color: white;
+    color: var(--font_color);
   }
   
   .ltr {
@@ -47,32 +68,50 @@ body {
   
   .menu-management {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-direction: column;
-    width: 5%;
-    border: 1px solid black;
-    background-color: #403D39;
+    width: 5vw;
+    border: 1px solid var(--border);
+    background-color: var(--primary_background);
     background-size: 3vw 3vw;
     position: fixed;
-    top: 0;
+    top: 5vh;
     left: 0;
-    height: 100%;
-    z-index: 1;
+    height: 95vh;
+    z-index: 3;
     white-space: nowrap;
+  }
+
+  .top-icons {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20%;
+    gap: 1vh; 
+  }
+  
+  .bottom-icons {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20%;
+    gap: 1vh; 
   }
 
 .treeView-management {
   display: flex;
-  border: 2px  solid black;
-  width: 10%;
+  border: 1px  solid var(--border);
+  width: 10vw;
   text-align: left;
-  color: white;
-  background-color: #403D39;
+  color: var(--font_color);
+  background-color: var(--primary_background);
   position: fixed;
-  top: 15px;
-  left: 5%; /* Leave space for folder-management */
-  height: 100%;
+  top: 5vh;
+  left: 5vw;
+  height: 95vh;
   z-index: 2;
   white-space: nowrap;
 }
@@ -80,6 +119,7 @@ body {
 .main-tree {
   display: flex !important;
   width: 90% !important;
+  margin-top: 1vh;
 }
 
 .file-icon {
@@ -123,16 +163,15 @@ span.arrow {
   line-height: 20px;
   font-weight: 400;
   text-align: left;
-  background-color: #252422;;
-  margin-left: 15%; /* Adjust margin to leave space for folder and note divs */
+  background-color: var(--secondary_background);;
+  margin-left: 15vw; /* Adjust margin to leave space for folder and note divs */
   z-index: 0; /* Ensure the editor is below the other divs */
-  
 }
   
   .editor-inner {
-    background: #252422;
-    ;
+    background: var(--secondary_background);
     position: relative;
+    margin-top: 10vh;
   }
   
   .editor-input {
@@ -140,17 +179,16 @@ span.arrow {
     min-height: 100vh;
     resize: none;
     font-size: 15px;
-    caret-color: white;
+    caret-color: var(--font_color);
     position: relative;
     tab-size: 1;
     outline: 0;
     padding: 15px 10px;
-    caret-color: white;
-    color: white;
+    color: var(--font_color);
   }
   
   .editor-placeholder {
-    color: white;
+    color: var(--font_color);
     overflow: hidden;
     position: absolute;
     text-overflow: ellipsis;
@@ -160,7 +198,7 @@ span.arrow {
     user-select: none;
     display: inline-block;
     pointer-events: none;
-  }
+}
   
   .editor-text-bold {
     font-weight: bold;
@@ -183,7 +221,7 @@ span.arrow {
   }
   
   .editor-text-code {
-    background-color: darkgray;
+    background-color:rgb(240, 242, 245);
     padding: 1px 0.25rem;
     font-family: Menlo, Consolas, Monaco, monospace;
     font-size: 94%;
@@ -196,8 +234,8 @@ span.arrow {
   
   .tree-view-output {
     display: block;
-    background: #222;
-    color: #fff;
+    background: var(--primary_background);
+    color: var(--font_color);
     padding: 5px;
     font-size: 12px;
     white-space: pre-wrap;
@@ -296,7 +334,7 @@ span.arrow {
   
   .editor-heading-h1 {
     font-size: 24px;
-    color: white;
+    color: var(--font_color);
     font-weight: 400;
     margin: 0;
     margin-bottom: 12px;
@@ -317,8 +355,8 @@ span.arrow {
     margin: 0;
     margin-left: 20px;
     font-size: 15px;
-    color: rgb(101, 103, 107);
-    border-left-color: rgb(206, 208, 212);
+    color: var(--quote-text);
+    border-left-color: var(--tertiary_background);
     border-left-width: 4px;
     border-left-style: solid;
     padding-left: 16px;
@@ -421,11 +459,17 @@ span.arrow {
   }
   
   .toolbar {
+    position: fixed;
+    top: 5vh;
+    left: 15vw;
+    width: 100%;
     display: flex;
     margin-bottom: 1px;
-    background: darkgray;
-    padding: 4px;
+    background: var(--tertiary_background);
+    border: solid var(--border);
+    padding: 1vh;
     vertical-align: middle;
+    z-index: 2;
   }
   
   .toolbar button.toolbar-item {
@@ -850,41 +894,47 @@ span.arrow {
 }
 
 .overlay {
-    background: rgba(49,49,49,0.8);
+    background: var(--overlay)
+
 }
+
+
 .modal-content {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
-  background: #f1f1f1;
+  background: var(--primary_background);
+  border:solid var(--border);
+  color: var(--font_color);
   padding: 14px 28px;
   border-radius: 3px;
   align-items: center;
   justify-content: center;
   max-width: 600px; /* Change max-width to 100% */
   min-width: 300px; /* Adjust min-width based on your design requirements */
+  z-index: 5;
 }
 
 
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+  background-color: var(--tertiary_background);
+  color: black;
+  box-shadow: none;
+  border: solid var(--border);
 }
   .add-folder {
     display: flex;
-    margin-top: 15px;
-    margin-bottom: 15px;
     color: white;
     width: 2.5vw;
     height: 2.5vw;
     background-size: 2.5vw 2.5vw;
     font-size: 1.5vw;
-    left: 10%;
-    top: 1%; 
     background-image: url(../public/images/icons/add-folder.svg);
   }
   
@@ -904,8 +954,6 @@ span.arrow {
     width: 2.5vw;
     height: 2.5vw;
     background-size: 2.5vw 2.5vw;
-    left: 10%; 
-    top: 100px; 
     background-image: url(../public/images/icons/save.svg);
   }
   .upload {
@@ -914,30 +962,72 @@ span.arrow {
     width: 3.5vw;
     height: 3.5vw;
     background-size: 3.5vw 3.5vw;
-    left: 10%; 
-    top: 100px; 
+    margin-bottom: -0.5vw;
     background-image: url(../public/images/icons/upload.svg);
   }
   .settings {
-  display: flex;
-  margin-top: auto;
-  bottom: 1%;
-  left: 10%;
-  width: 2.5vw;
-  height: 2.5vw;
-  background-size: 2.5vw 2.5vw;
-  background-image: url(../public/images/icons/settings.svg);
+    display: flex;
+    margin-top: auto;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: 2.5vw 2.5vw;
+    background-image: url(../public/images/icons/settings.svg);
   }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 5px;
+  }
+  
+  .theme-toggle input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    background-color: var(--border);
+    border: solid var(--border);
+    border-radius: 15px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle input:checked {
+    background-color: black;
+  }
+  
+  .theme-toggle input::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 0;
+    background-color: var(--tertiary_background);
+    border:solid var(--border);
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .theme-toggle input:checked::before {
+    transform: translateX(30px);
+  }
+  
   .help {
-  display: flex;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  bottom: 6%;
-  left: 15%;
-  width: 2vw;
-  height: 2vw;
-  background-size: 2vw 2vw;
-  background-image: url(../public/images/icons/help.svg);
+    display: flex;
+    margin-top: auto;
+    width: 2.3vw;
+    height: 2.3vw;
+    background-size: 2.3vw 2.3vw;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../public/images/icons/help.svg);
   }
 
 
@@ -949,7 +1039,7 @@ span.arrow {
   line-height: 20px;
   font-weight: 400;
   text-align: center;
-  background-color:  #252422;
+  background-color:  var(--secondary_background);
   margin-left: 12%; /* Adjust margin to leave space for folder and note divs */
   z-index: 0; 
   }
@@ -965,8 +1055,8 @@ span.arrow {
   
   .newFolderButton, .gotoFileButton, .recentButton, .closeButton {
     margin-bottom: 5px; /* Adds some space between the buttons */
-    background-color: #252422;;
-    color: white;
+    background-color: var(--secondary_background);
+    color: var(--font_color);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -978,10 +1068,18 @@ span.arrow {
   .top-menu-bar {
     position: fixed;
     top: 0;
-    border: #000;
-    border-radius: 5%;
+    border: solid var(--border);
     width: 100%;
-    height: 15px; /* adjust as needed */
-    background-color: #252422; /* adjust as needed */
-    z-index: 3; /* adjust as needed */
+    height: 5vh;
+    background-color: var(--primary_background);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 4;
   }
+
+.logo {
+  width: 5vw;
+  height: 5vh;
+  margin-right: 1rem;
+}

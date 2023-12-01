@@ -51,7 +51,6 @@ const editorConfig = {
 };
 
 
-
 export default function Editor() {
   return (
     <LexicalComposer initialConfig={editorConfig}>
