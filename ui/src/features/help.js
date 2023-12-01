@@ -19,12 +19,20 @@ function App(){
     <div className="modal">
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
-        <h2>Hello Modal</h2>
-        <p>
-          testing works
-        </p>
+        <h2>Help</h2>
+        {/* <p>
+          Plugins:
+          <ul>
+            <li>
+              <a href="https://lexical.dev/" target="_blank" rel="noopener noreferrer">
+                https://lexical.dev/
+              </a>
+            </li>
+          </ul>
+        </p> */}
+        <p>Keyboard shortcuts:</p>
         <button className="close-modal" onClick={toggleModal}>
-          CLOSE
+          X
         </button>
       </div>
     </div>

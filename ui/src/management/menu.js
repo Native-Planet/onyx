@@ -9,12 +9,15 @@ function App(){
 
 
     return (
-        
         <div className="menu-management">
-            <Create/>
-            <Note/>
-            <Settings/>
-            <Help/>
+            <div className="top-icons">
+                <Create/>
+                <Note/>
+            </div>
+            <div className="bottom-icons">
+                <Settings/>
+                <Help/>
+            </div>
         </div>
     );
 }
