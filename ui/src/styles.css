@@ -944,9 +944,29 @@ span.arrow {
     width: 2.5vw;
     height: 2.5vw;
     background-size: 2.5vw 2.5vw;
-    left: 10%; /* Adjusted left value to match .add-folder */
-    top: 100px; /* Adjusted top value to stack the icons */
+    left: 10%; 
+    top: 100px; 
     background-image: url(../public/images/icons/add-note.svg);
+  }
+  .save {
+    display: flex;
+    margin-bottom: auto;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: 2.5vw 2.5vw;
+    left: 10%; 
+    top: 100px; 
+    background-image: url(../public/images/icons/save.svg);
+  }
+  .upload {
+    display: flex;
+    margin-bottom: auto;
+    width: 3.5vw;
+    height: 3.5vw;
+    background-size: 3.5vw 3.5vw;
+    left: 10%; 
+    top: 100px; 
+    background-image: url(../public/images/icons/upload.svg);
   }
   .settings {
     display: flex;
