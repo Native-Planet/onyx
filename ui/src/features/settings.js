@@ -44,7 +44,8 @@ function App() {
     <>
       <button
         onClick={toggleModal}
-        style={{ background: "none", border: "none", cursor: "pointer" }}
+        style={{ background: "none", border: "none", cursor: "pointer", display: "flex",
+        alignItems: "center", justifyContent: "center", }}
       >
         <i className="settings" title="Open Settings" />
       </button>

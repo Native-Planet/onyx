@@ -55,7 +55,7 @@ body {
   
   h1 {
     font-size: 24px;
-    color: white;
+    color: var(--font_color);
   }
   
   .ltr {
@@ -954,8 +954,6 @@ span.arrow {
     width: 2.5vw;
     height: 2.5vw;
     background-size: 2.5vw 2.5vw;
-    left: 10%; 
-    top: 100px; 
     background-image: url(../public/images/icons/save.svg);
   }
   .upload {
@@ -964,8 +962,7 @@ span.arrow {
     width: 3.5vw;
     height: 3.5vw;
     background-size: 3.5vw 3.5vw;
-    left: 10%; 
-    top: 100px; 
+    margin-bottom: -0.5vw;
     background-image: url(../public/images/icons/upload.svg);
   }
   .settings {
@@ -1026,7 +1023,11 @@ span.arrow {
     width: 2.3vw;
     height: 2.3vw;
     background-size: 2.3vw 2.3vw;
-  background-image: url(../public/images/icons/help.svg);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../public/images/icons/help.svg);
   }
 
 

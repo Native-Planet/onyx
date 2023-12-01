@@ -11,7 +11,8 @@ function App(){
 
     return (
         <>
-        <button onClick={toggleModal} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+        <button onClick={toggleModal} style={{ background: 'none', border: 'none', cursor: 'pointer', display: "flex",
+        alignItems: "center", justifyContent: "center",}}>
             <i className="help" title="Help Menu"/>
         </button>
 
